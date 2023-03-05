@@ -1,0 +1,16 @@
+start_number = int(input())
+if start_number % 2 == 0:
+  print("not an odd number")
+else:
+  n_1 = 0
+  n = (start_number+1)/2
+  for i in range(21):
+    inp = str(input())
+    if inp == 's':
+      n = n - (n - n_1)/2 
+      print(n)
+    if inp == 'l':
+      temp = n
+      n = (n - n_1)/2 + n
+      n_1 = temp
+      print(n)
